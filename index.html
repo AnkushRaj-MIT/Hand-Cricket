@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hand Cricket</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+<body>
+    <div class="container">
+        <main class="home-screen">
+            <h1>HAND CRICKET</h1>
+            <img src="images/handCricket.png" id="cricket" alt="Hand Cricket image">
+            <button id="start-btn">Start Game</button>
+        </main>
+        <div class="toss-screen hide">
+            <h2>Choose Even or Odd</h2>
+            <div class="choice-container">
+                <button class="choice-btn" id="even-btn">Even</button>
+                <button class="choice-btn" id="odd-btn">Odd</button>
+            </div>
+            <p id="result"></p>
+        </div>
+        <div class="choice-screen hide">
+            <h2> Choose Bat or Bowl</h2>
+            <div class ="choice-container">
+                <button id="bat-btn" class="choice-btn">Bat</button>
+                <button id="bowl-btn" class="choice-btn">Bowl</button>
+            </div>
+        </div> 
+        <div class="match-screen hide">
+            <h2 id="innings-text">Your Batting</h2>
+            <div class="score-board">
+                <div class="score-box">
+                    <h3 id="user">Your score</h3>
+                    <p id="user-score">0</p>
+                </div>
+                <div class="score-box">
+                    <h3 id="computer">Computer score</h3>
+                    <p id="computer-score">0</p>
+                </div>
+            </div>
+            <div class="current-play">
+                <img id="user-choice-img">
+                <span class="vs">VS</span>
+                <img id="computer-choice-img">
+            </div>    
+                <p id="match-message">Choose your hand</p>
+                <div class="hand-buttons">
+                    <img src="images/1.jpeg" class="hand-img" data-run="1">
+                    <img src="images/2.jpeg" class="hand-img" data-run="2">
+                    <img src="images/3.jpeg" class="hand-img" data-run="3">
+                    <img src="images/4.jpeg" class="hand-img" data-run="4">
+                    <img src="images/5.jpeg" class="hand-img" data-run="5">
+                    <img src="images/6.jpeg" class="hand-img" data-run="6">
+                </div>
+                <button class="hide" id="play-again-btn">Play Again</button>
+        </div> 
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
