@@ -37,12 +37,12 @@ function playToss(userChoice){
     setTimeout(() => {
         if(userChoice === tossResult){
             userWonToss = true;
-            result.style.color="lightgreen";
+            result.style.color="#4CAF50";
             result.innerText = "You won the toss!";
         }
         else{
             userWonToss = false;
-            result.style.color="red";
+            result.style.color="#F44336";
             result.innerText = "Computer won the toss!";
         }
         setTimeout(() => {
@@ -55,7 +55,7 @@ function playToss(userChoice){
                     userBatFirst=(computerChoice === "Bowl");
                     isUserBatting = userBatFirst;
                     inningsText.innerText = isUserBatting? "Your Batting": "Computer Batting";
-                    result.style.color="lightgreen";
+                    result.style.color="#4CAF50";
                     result.innerText =`Computer chose to ${computerChoice}`;
                     setTimeout(() => {
                         tossScreen.classList.add("hide");
@@ -105,11 +105,11 @@ const playAgainBtn=document.getElementById("play-again-btn");
 
 function endMatch(message, result){
     if(result === "win")
-        matchMessage.style.color = "lightgreen";
+        matchMessage.style.color = "#4CAF50";
     else if(result === "draw")
         matchMessage.style.color = "yellow";
     else
-        matchMessage.style.color = "red";
+        matchMessage.style.color = "#F44336";
     matchMessage.innerText = message;
     document.querySelector(".hand-buttons").classList.add("hide");
     playAgainBtn.classList.remove("hide");
@@ -122,7 +122,7 @@ function playMatch(userRun){
     if(isUserBatting){
         if(userRun===computerRun){
             if(innings === 1){
-                matchMessage.style.color="red";
+                matchMessage.style.color="#F44336";
                 matchMessage.innerText="You got OUT! ";
                 runBtns.forEach(btn => {
                     btn.style.pointerEvents = "none";
@@ -158,7 +158,7 @@ function playMatch(userRun){
                 endMatch("You won the game!","win");
             }
             else{
-                matchMessage.style.color="lightgreen";
+                matchMessage.style.color="#4CAF50";
                 if(innings===1) matchMessage.innerText=`You scored ${userRun} runs`;
                 else matchMessage.innerText=`You scored ${userRun} runs `;
             }
@@ -167,7 +167,7 @@ function playMatch(userRun){
     else{
         if(userRun===computerRun){
             if(innings ===1){
-                matchMessage.style.color="red";
+                matchMessage.style.color="#F44336";
                 matchMessage.innerText="Computer got OUT! ";
                 target=computerScore+1;
                 runBtns.forEach(btn=>{
@@ -203,7 +203,7 @@ function playMatch(userRun){
                 endMatch("Computer won the game!","lose");
             }
             else{
-                matchMessage.style.color="lightgreen";
+                matchMessage.style.color="#4CAF50";
                 if(innings===1) matchMessage.innerText=`Computer scored ${computerRun} runs`;
                 else matchMessage.innerText=`Computer scored ${computerRun} runs`;
             }
