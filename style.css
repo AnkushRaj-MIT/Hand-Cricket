@@ -197,7 +197,7 @@ h1{
 }
 @media (max-width:600px){
     #cricket{
-       width: 17rem;
+       width: 50px;
        max-width: 300px;
        height: auto;
        border-radius: 1.5rem;
