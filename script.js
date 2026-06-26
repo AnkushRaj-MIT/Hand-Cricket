@@ -158,7 +158,7 @@ function playMatch(userRun){
                 endMatch("You won the game!","win");
             }
             else{
-                matchMessage.style.color="#4CAF50";
+                matchMessage.style.color="yellow";
                 if(innings===1) matchMessage.innerText=`You scored ${userRun} runs`;
                 else matchMessage.innerText=`You scored ${userRun} runs `;
             }
@@ -203,7 +203,7 @@ function playMatch(userRun){
                 endMatch("Computer won the game!","lose");
             }
             else{
-                matchMessage.style.color="#4CAF50";
+                matchMessage.style.color="yellow";
                 if(innings===1) matchMessage.innerText=`Computer scored ${computerRun} runs`;
                 else matchMessage.innerText=`Computer scored ${computerRun} runs`;
             }
